@@ -1,0 +1,105 @@
+/* Kosheru - Estilos Globales del Panel Administrativo */
+@import url('../../css/variables.css');
+@import url('../../css/reset.css');
+
+body.admin-body {
+  background-color: #f4f0e8;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+  background: linear-gradient(180deg, #2c1a0e 0%, #4a2c17 100%);
+  color: #f5f0e8;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+}
+
+.sidebar-brand {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 1.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow-y: auto;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--borde-radio-sm);
+  color: #d0c4b4;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transicion);
+}
+
+.sidebar-item:hover, .sidebar-item.active {
+  background-color: var(--color-rojo-kosheru);
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  padding: 1rem 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-back-store {
+  background-color: rgba(255,255,255,0.08);
+  color: #f1c40f !important;
+}
+
+.btn-back-store:hover {
+  background-color: var(--color-naranja) !important;
+  color: #fff !important;
+}
+
+/* Admin Main Content Wrapper */
+.admin-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.admin-navbar {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0d7c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra-suave);
+}
+
+.admin-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.admin-page-title {
+  font-family: var(--fuente-titulos);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+  margin-bottom: 1.5rem;
+}
+
+.btn-admin-toggle {
+  display: none;
+  font-size: 1.5rem;
+}

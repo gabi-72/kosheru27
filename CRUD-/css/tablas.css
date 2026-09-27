@@ -1,0 +1,69 @@
+/* Kosheru - Estilos de Tablas del Panel de Administración */
+.admin-table-container {
+  background-color: #ffffff;
+  border-radius: var(--borde-radio-lg);
+  border: 1px solid #e0d7c7;
+  box-shadow: var(--sombra-suave);
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th {
+  background-color: var(--color-beige);
+  color: var(--color-cafe-oscuro);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 2px solid #e0d7c7;
+}
+
+.admin-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #f2ece1;
+  color: #333;
+}
+
+.admin-table tr:hover {
+  background-color: #fffdf5;
+}
+
+.action-btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-action-edit {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--borde-radio-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.btn-action-delete {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--borde-radio-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.btn-action-view {
+  background-color: var(--color-rojo-kosheru);
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--borde-radio-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}

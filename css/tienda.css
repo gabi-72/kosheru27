@@ -1,0 +1,112 @@
+/* Kosheru - Estilos del Catálogo de la Tienda */
+
+.tienda-header {
+  background: linear-gradient(135deg, var(--color-beige), #e8ded0);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #e0d5c4;
+}
+
+.tienda-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Categorías Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--borde-radio-full);
+  background-color: #fff;
+  border: 1.5px solid #dcd3c5;
+  color: var(--color-cafe-oscuro);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transicion);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--color-rojo-kosheru);
+  color: #fff;
+  border-color: var(--color-rojo-kosheru);
+  box-shadow: 0 4px 12px rgba(192, 57, 43, 0.25);
+}
+
+/* Store Search Input bar on Store Page */
+.tienda-search-bar {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  position: relative;
+}
+
+.tienda-search-bar input {
+  width: 100%;
+  padding: 0.85rem 1.2rem 0.85rem 3rem;
+  border-radius: var(--borde-radio-full);
+  border: 2px solid #dcd3c5;
+  background-color: #fff;
+  font-size: 1rem;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicion);
+}
+
+.tienda-search-bar input:focus {
+  outline: none;
+  border-color: var(--color-naranja);
+  box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.2);
+}
+
+.tienda-search-bar .search-icon {
+  left: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/* Store Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: #fff;
+  border-radius: var(--borde-radio-lg);
+  border: 1px dashed #dcd3c5;
+  grid-column: 1 / -1;
+}
+
+.empty-state-icon {
+  font-size: 3.5rem;
+  color: #a8988a;
+  margin-bottom: 1rem;
+}
+
+.empty-state-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  filter: invert(35%) sepia(13%) saturate(310%) hue-rotate(343deg) brightness(1.1) contrast(1.1);
+}
+
+.empty-state-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-desc {
+  color: #777;
+  font-size: 0.95rem;
+}

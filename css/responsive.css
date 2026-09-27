@@ -1,0 +1,91 @@
+/* Kosheru - Mobile-First Responsive Overrides & Media Queries */
+
+/* Breakpoint 1280px (Desktop Grande) */
+@media (max-width: 1280px) {
+  .header-container, .tienda-container, .carousel-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Breakpoint 1024px (Laptops & Tablets Horizontal) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+}
+
+/* Breakpoint 768px (Tablets Vertical & Smartphones Grandes) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem 4rem 1rem;
+    border-radius: 0 0 25px 25px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .factura-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .factura-header-banner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .factura-meta-info {
+    text-align: left;
+  }
+
+  .factura-totals-box {
+    width: 100%;
+  }
+
+  .auth-card {
+    padding: 1.8rem 1.25rem;
+  }
+}
+
+/* Breakpoint 480px (Smartphones Estándar 320px - 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  .header-container {
+    padding: 0.6rem 0.85rem;
+  }
+
+  .brand-logo img {
+    height: 38px;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .product-image-container {
+    height: 150px;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .factura-body {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .factura-table th, .factura-table td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+  }
+}

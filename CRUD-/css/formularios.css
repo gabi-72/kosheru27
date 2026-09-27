@@ -1,0 +1,48 @@
+/* Kosheru - Modales y Formularios de Administración */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transicion);
+}
+
+.admin-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.admin-modal-box {
+  background: #ffffff;
+  border-radius: var(--borde-radio-lg);
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: var(--sombra-elevada);
+  border: 1px solid #e0d7c7;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.admin-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8rem;
+}
+
+.admin-modal-title {
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+}

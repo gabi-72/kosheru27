@@ -1,0 +1,293 @@
+body {
+ background-color: rgba(251, 218, 227, 0.95);
+}/* Kosheru - Header & Dropdown UI Styling */
+.header-main {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #F7E8E1;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--color-beige);
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicion);
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Header Search */
+.header-search {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+}
+
+.header-search input {
+  width: 100%;
+  padding: 0.7rem 1.2rem 0.7rem 2.8rem;
+  border-radius: var(--borde-radio-full);
+  border: 1.5px solid #e0d8cc;
+  background-color: #fff;
+  font-size: 0.95rem;
+  transition: var(--transicion);
+}
+
+.header-search input:focus {
+  outline: none;
+  border-color: var(--color-rojo-kosheru);
+  box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c786a;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+/* Header Nav Links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-cafe-oscuro);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transicion);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-rojo-kosheru);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-rojo-kosheru), var(--color-naranja));
+  border-radius: 2px;
+  transition: var(--transicion);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Action Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Cart Trigger Button */
+.btn-cart-trigger {
+  position: relative;
+  background-color: var(--color-beige);
+  color: var(--color-cafe-oscuro);
+  padding: 0.6rem 1rem;
+  border-radius: var(--borde-radio-full);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transicion);
+  border: 1px solid #e2dacd;
+}
+
+.btn-cart-trigger:hover {
+  background-color: var(--color-rojo-kosheru);
+  color: #fff;
+  border-color: var(--color-rojo-kosheru);
+  transform: translateY(-2px);
+}
+
+.cart-badge {
+  background-color: var(--color-naranja);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--borde-radio-full);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* User Menu & Dropdown */
+.user-menu-container {
+  position: relative;
+}
+
+.btn-user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--borde-radio-full);
+  background-color: var(--color-beige);
+  color: var(--color-cafe-oscuro);
+  font-weight: 600;
+  border: 1px solid #e2dacd;
+  transition: var(--transicion);
+}
+
+.btn-user-trigger:hover {
+  background-color: #eae1d3;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 240px;
+  background-color: #ffffff;
+  border-radius: var(--borde-radio-md);
+  box-shadow: var(--sombra-elevada);
+  border: 1px solid var(--color-beige);
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1050;
+  animation: fadeInDown 0.2s ease-out forwards;
+}
+
+.user-dropdown.show {
+  display: flex;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-header {
+  border-bottom: 1px solid var(--color-beige);
+  padding-bottom: 0.6rem;
+}
+
+.dropdown-greeting {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-rojo-oscuro);
+}
+
+.dropdown-email {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.dropdown-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: var(--borde-radio-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: var(--transicion);
+}
+
+.btn-dropdown-purchases {
+  background: linear-gradient(135deg, var(--color-rojo-kosheru), var(--color-rojo-oscuro));
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.25);
+}
+
+.btn-dropdown-purchases:hover {
+  background: linear-gradient(135deg, var(--color-rojo-oscuro), var(--color-cafe-oscuro));
+  transform: translateY(-1.5px);
+}
+
+.btn-dropdown-admin {
+  background: linear-gradient(135deg, var(--color-naranja), var(--color-dorado));
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.25);
+}
+
+.btn-dropdown-admin:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1.5px);
+}
+
+.btn-dropdown-logout {
+  background-color: var(--color-beige);
+  color: var(--color-cafe-oscuro);
+}
+
+.btn-dropdown-logout:hover {
+  background-color: var(--color-error);
+  color: #ffffff;
+}
+
+/* Mobile Hamburger Toggle */
+.btn-mobile-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-cafe-oscuro);
+  padding: 0.4rem;
+}
+
+/* Header Responsive (Mobile Layout: [LOGO] [CART] [USER] [☰]) */
+@media (max-width: 992px) {
+  .header-search {
+    display: none; /* Accessible via mobile drawer or section */
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background-color: #fffdf5;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.2rem;
+    box-shadow: var(--sombra-elevada);
+    border-bottom: 2px solid var(--color-beige);
+    display: none;
+  }
+
+  .nav-menu.show-mobile {
+    display: flex;
+  }
+
+  .btn-mobile-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,129 @@
+/* Kosheru - Estilos de Dashboard & Tarjetas de Métricas */
+.dashboard-filter-bar {
+  background-color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--borde-radio-md);
+  border: 1px solid #e0d7c7;
+  box-shadow: var(--sombra-suave);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.metric-card {
+  background-color: #ffffff;
+  border-radius: var(--borde-radio-md);
+  padding: 1.5rem;
+  border: 1px solid #e0d7c7;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  transition: var(--transicion);
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-elevada);
+}
+
+.metric-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: var(--color-beige);
+  flex-shrink: 0;
+}
+
+.metric-data {
+  flex: 1;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-cafe-oscuro);
+  margin-top: 0.2rem;
+}
+
+/* ===================== GRÁFICOS DEL DASHBOARD ===================== */
+.charts-section-title {
+  font-family: var(--fuente-titulos);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+  margin-bottom: 1.25rem;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.chart-card {
+  background-color: #ffffff;
+  border-radius: var(--borde-radio-md);
+  border: 1px solid #e0d7c7;
+  box-shadow: var(--sombra-suave);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+  margin-bottom: 1rem;
+}
+
+.chart-card-canvas-wrap {
+  position: relative;
+  height: 260px;
+}
+
+.chart-card-canvas-wrap canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-card-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 992px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+/* Kosheru - Sistema de Variables de Diseño & Paleta Oficial */
+:root {
+  /* Paleta Oficial Kosheru */
+  --color-rojo-kosheru: #c0392b;
+  --color-rojo-oscuro: #922b21;
+  --color-naranja: #e67e22;
+  --color-dorado: #d4a017;
+  --color-verde-oliva: #6b7a3c;
+  --color-beige: #f5f0e8;
+  --color-crema: #fffdf5;
+  --color-cafe-oscuro: #4a2c17;
+
+  /* Estados y feedback */
+  --color-error: #e74c3c;
+  --color-exito: #27ae60;
+  --color-alerta: #f39c12;
+  --color-info: #165d8d;
+
+  /* Sombras, Bordes y Transiciones */
+  --sombra-suave: 0 4px 15px rgba(74, 44, 23, 0.08);
+  --sombra-elevada: 0 10px 25px rgba(74, 44, 23, 0.15);
+  --borde-radio-sm: 8px;
+  --borde-radio-md: 12px;
+  --borde-radio-lg: 20px;
+  --borde-radio-full: 9999px;
+  --transicion: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* Fuents */
+  --fuente-principal: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --fuente-titulos: 'Outfit', 'Georgia', serif;
+}

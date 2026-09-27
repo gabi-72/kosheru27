@@ -1,0 +1,289 @@
+/* Kosheru - Diseñador de Factura Electrónica Profesional */
+
+.factura-wrapper {
+  max-width: 850px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: var(--borde-radio-lg);
+  box-shadow: var(--sombra-elevada);
+  border: 1px solid #e0d7c7;
+  overflow: hidden;
+  font-family: var(--fuente-principal);
+}
+
+/* Encabezado Vino Tinto / Dorado */
+.factura-header-banner {
+  background: linear-gradient(135deg, var(--color-rojo-oscuro), #5c1811);
+  color: #fffdf5;
+  padding: 2.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 5px solid var(--color-dorado);
+  position: relative;
+}
+
+.factura-brand-info h1 {
+  font-family: var(--fuente-titulos);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fffdf5;
+  margin-bottom: 0.2rem;
+}
+
+.factura-brand-info p {
+  font-size: 0.95rem;
+  color: #f1c40f;
+  font-weight: 600;
+}
+
+.factura-location {
+  font-size: 0.85rem;
+  color: #e0d0c0;
+  margin-top: 0.4rem;
+}
+
+.factura-meta-info {
+  text-align: right;
+}
+
+.factura-title-tag {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-naranja);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+.factura-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.factura-date-time {
+  font-size: 0.85rem;
+  color: #f5f0e8;
+  margin-top: 0.4rem;
+}
+
+/* Body container */
+.factura-body {
+  padding: 2.5rem;
+}
+
+/* Badge de Estado */
+.factura-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-beige);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--borde-radio-md);
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--color-verde-oliva);
+}
+
+.factura-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--borde-radio-full);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.badge-completado {
+  background-color: #eafaf1;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+}
+
+.badge-pendiente {
+  background-color: #fef9e7;
+  color: #f39c12;
+  border: 1px solid #f39c12;
+}
+
+.badge-cancelado {
+  background-color: #fceae8;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+}
+
+/* Grid de Bloques (Comprador vs Entrega/Pago) */
+.factura-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.factura-block {
+  background-color: #fffdf5;
+  border: 1.5px solid #eae1d3;
+  border-radius: var(--borde-radio-md);
+  padding: 1.25rem;
+}
+
+.factura-block-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-rojo-oscuro);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--color-dorado);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.factura-data-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.data-label {
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.data-value {
+  color: var(--color-cafe-oscuro);
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Tabla de Productos Adquiridos */
+.factura-table-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-cafe-oscuro);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.factura-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.factura-table th {
+  background-color: var(--color-rojo-oscuro);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.factura-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.factura-table tr:nth-child(even) {
+  background-color: #fffdf9;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Totales */
+.factura-totals-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.factura-totals-box {
+  width: 320px;
+  background-color: #fffdf5;
+  border: 1.5px solid #eae1d3;
+  border-radius: var(--borde-radio-md);
+  padding: 1.25rem;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.totals-row.final-total {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-rojo-kosheru);
+  border-top: 2px solid var(--color-dorado);
+  padding-top: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+/* Print Bar Button */
+.factura-actions-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-beige);
+  border-top: 1px solid #e0d7c7;
+}
+
+.btn-print-invoice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-rojo-kosheru), var(--color-rojo-oscuro));
+  color: #fff;
+  font-weight: 800;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--borde-radio-full);
+  box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+  transition: var(--transicion);
+}
+
+.btn-print-invoice:hover {
+  background: linear-gradient(135deg, var(--color-naranja), var(--color-dorado));
+  transform: translateY(-2px);
+}
+
+/* Reglas de Impresión (@media print) */
+@media print {
+  header, footer, .header-main, .factura-actions-bar, .nav-menu, .btn-print-invoice, .cart-drawer-overlay {
+    display: none !important;
+  }
+
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  .factura-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .factura-header-banner {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

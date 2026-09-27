@@ -1,0 +1,14 @@
+# Kosheru - Bloquea el acceso web directo a los logs.
+# Los archivos siguen siendo escribibles por PHP (file_put_contents),
+# pero nadie puede abrirlos desde el navegador con la URL directa.
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Apache 2.2 (compatibilidad con hostings más antiguos como InfinityFree)
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

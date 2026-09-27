@@ -1,0 +1,25 @@
+/* Kosheru - Responsive Admin Overrides */
+@media (max-width: 992px) {
+  body.admin-body {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    left: -280px;
+    width: 260px;
+    transition: transform 0.3s ease;
+  }
+
+  .admin-sidebar.show-mobile {
+    transform: translateX(280px);
+  }
+
+  .btn-admin-toggle {
+    display: block;
+  }
+
+  .admin-content {
+    padding: 1.25rem;
+  }
+}
